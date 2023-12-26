@@ -52,15 +52,14 @@ window.addEventListener("mousemove", e  => {
 
 parallax_el.forEach((el) => {
 
-    let location = el.dataset.location, duration = el.dataset.duration;
     gsap.from(el,{
-        y : location,
-        duration: duration,
+        top : `${el.dataset.location}px`,
+        duration: el.dataset.duration,
     })
 
 });
 
 gsap.from('.main-text',{
-    y : -1000,
+    top : -100,
     duration: 1,
 })
