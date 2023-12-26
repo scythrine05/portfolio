@@ -59,7 +59,13 @@ parallax_el.forEach((el) => {
 
 });
 
-gsap.from('.main-text',{
-    top : -100,
+gsap.from('.dev-text',{
+    y : -1000,
     duration: 1,
 })
+
+gsap.from('.design-text',{
+    y : 1000,
+    duration: 1,
+})
+

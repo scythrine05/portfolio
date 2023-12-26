@@ -158,7 +158,10 @@ main{
   font-size: 7vw;
   transform: translate(-50%, -50%);
   font-family: 'Black Ops One';
+  color: #fff;
+  line-height: 1.2em;
 }
+
 
 .about{
   position: relative;
