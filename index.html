@@ -1,24 +1,66 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="./style.css" type="text/css" /> 
+    <link rel="stylesheet" href="./style.css" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rohan Murmu | Portfolio</title>
   </head>
   <body>
-    <header><nav>R.M</nav></header>
+    <div id="cursor"></div>
+    <header>
+      <nav>
+        <div><span>R.M.</span><span>Rohan Murmu</span></div>
+      </nav>
+    </header>
     <main>
-      <img src="layers/layer5.png" data-speedX="0.25" data-speedY="0.23" data-distance="0"  class="parallax layer-5" />
-      <img src="layers/layer4.png" data-speedX="0.23" data-speedY="0.21" data-distance="1200"  class="parallax layer-4" />
-      <img src="layers/layer3.png" data-speedX="0.20" data-speedY="0.18" data-distance="1500"  class="parallax layer-3" />
-      <img src="layers/layer2.png" data-speedX="0.12" data-speedY="0.10" data-distance="1800"  class="parallax layer-2" />
-      <img src="layers/layer1.png" data-speedX="0.05" data-speedY="0.01" data-distance="2000"  class="parallax layer-1" />
-      <div class="main-text"><span>Developer</span><br/><span>. Designer</span></div>
+      <img
+        src="main_layers/layer5.png"
+        data-speedX="0.25"
+        data-speedY="0.23"
+        data-location="5000"
+        data-duration="0.65"
+        class="parallax layer-5"
+      />
+      <img
+        src="main_layers/layer4.png"
+        data-speedX="0.23"
+        data-speedY="0.21"
+        data-location="2000"
+        data-duration="0.35"
+        class="parallax layer-4"
+      />
+      <img
+        src="main_layers/layer3.png"
+        data-speedX="0.20"
+        data-speedY="0.18"
+        data-location="3000"
+        data-duration="0.4"
+        class="parallax layer-3"
+      />
+      <img
+        src="main_layers/layer2.png"
+        data-speedX="0.12"
+        data-speedY="0.10"
+        data-location="4000"
+        data-duration="0.45"
+        class="parallax layer-2"
+      />
+      <img
+        src="main_layers/layer1.png"
+        data-speedX="0.05"
+        data-speedY="0.01"
+        data-location="5000"
+        data-duration="0.5"
+        class="parallax layer-1"
+      />
+      <div class="main-text">
+        <span>Developer</span><br /><span>. Designer</span>
+      </div>
     </main>
-    <section class="about"> 
-      Main
-    </section>
+    <section class="skills"></section>
+    <section class="projects"></section>
+    <section class="contact"></section>
     <script type="module" src="/main.js"></script>
   </body>
 </html>

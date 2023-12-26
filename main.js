@@ -1,4 +1,4 @@
-import {gsap} from "gsap";
+import { gsap } from "gsap";
 
 const parallax_el = document.querySelectorAll(".parallax");
 const main = document.querySelector("main");
@@ -34,16 +34,33 @@ else {
     main.style.maxHeight = `${window.innerWidth * 1.6}px`;
 }
 
-// let timeline = gsap.timeline();
 
-// parallax_el.forEach(el => {
+const cursor = document.getElementById('cursor');
 
-//     timeline.from(
-//         el,
-//         {
-//             top: `${el.offsetHeight / 2 + el.dataset.distance}px`,
-//             duration: 1,
-//         },
-//         "1"
-//     );
-// })
+window.addEventListener("mousemove", e  => {
+
+    const xPos = e.clientX;
+    const yPos = e.clientY;
+
+    cursor.style.left = `${xPos}px`;
+    cursor.style.top = `${yPos}px`;
+
+})
+
+
+// GSAP Animation
+
+parallax_el.forEach((el) => {
+
+    let location = el.dataset.location, duration = el.dataset.duration;
+    gsap.from(el,{
+        y : location,
+        duration: duration,
+    })
+
+});
+
+gsap.from('.main-text',{
+    y : -1000,
+    duration: 1,
+})

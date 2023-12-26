@@ -41,6 +41,56 @@ header nav{
   font-size: 2vw;
 }
 
+header nav div{
+  position: relative;
+}
+
+header nav div span{
+  position: absolute;
+  transition: 0.1s linear;
+}
+
+header nav div span:nth-child(2){
+  opacity: 0;
+  visibility: hidden;
+}
+
+header nav div:hover span:nth-child(1){
+  opacity: 0;
+  visibility: hidden;
+ 
+}
+header nav div:hover span:nth-child(2){
+  opacity: 1;
+  visibility: visible;
+ 
+   width:100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  width: 400vw;
+  transform: rotate(90deg) translateY(-100vh);
+  transform-origin: top left;
+}
+
+.outer-wrapper {
+  width: 100vh;
+  height: 100vw;
+  transform: rotate(-90deg) translateX(-100vh);
+  transform-origin: top left;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  position: absolute;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  display:none;
+}
+
+
 main{
   position: relative;
   height: 100vh;
@@ -105,7 +155,7 @@ main{
   position: absolute;
   left: 50%;
   top: 50%;
-  font-size: 8vw;
+  font-size: 7vw;
   transform: translate(-50%, -50%);
   font-family: 'Black Ops One';
 }
@@ -113,7 +163,62 @@ main{
 .about{
   position: relative;
   background-color: #1b1a39;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  border: none;
 }
+.me,.me-shadow{
+  position: absolute;
+  width: 40%;
+  left: 30%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  transition: opacity 0.3s;
+}
+
+.me-shadow{
+  opacity: 0.7;
+}
+
+
+.city{
+  position: absolute;
+  width: 150%;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.intro-text{
+  z-index: 5;
+  font-size: 7vw;
+  transform: translate(-50%, -50%);
+  font-family: 'Black Ops One';
+}
+
+.intro-text p{
+  font-size: 2vw;
+  transform: translate(-50%, -50%);
+  font-family: 'Black Ops One';
+}
+
+#cursor{
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff; 
+  z-index: 999;
+  opacity: 0.5;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+
+
 
 /* Responsive */
 
@@ -144,3 +249,11 @@ main{
   }
 }
 
+@media (hover: none) {
+  .cursor {
+     pointer-events: none;
+   }
+   #cursor{
+    display: none;
+   }
+ }
